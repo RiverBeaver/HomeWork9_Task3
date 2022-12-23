@@ -9,6 +9,10 @@ body {
   background-color: #f4fbff;
   min-width: 300px;
 }
+body form {
+  margin: 2vw;
+  box-shadow: 0 0 0.75rem 0 rgba(74, 96, 128, 0.756);
+}
 body form h3 {
   font-weight: 600;
 }
@@ -52,6 +56,47 @@ body form div.sections section div input, body form div.sections section div sel
   width: 100%;
   background-color: transparent;
 }
+body form div.sections section div input:invalid:not(:-moz-placeholder-shown):not(:focus) {
+  color: #d23a5b;
+  border-color: #be304f;
+  background-image: url(img/invalid.png);
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+body form div.sections section div input:invalid:not(:-ms-input-placeholder):not(:focus) {
+  color: #d23a5b;
+  border-color: #be304f;
+  background-image: url(img/invalid.png);
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+body form div.sections section div input:invalid:not(:placeholder-shown):not(:focus) {
+  color: #d23a5b;
+  border-color: #be304f;
+  background-image: url(img/invalid.png);
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+body form div.sections section div input:valid:not(:-moz-placeholder-shown) {
+  color: #479dde;
+  border-color: #479dde;
+}
+body form div.sections section div input:valid:not(:-ms-input-placeholder) {
+  color: #479dde;
+  border-color: #479dde;
+}
+body form div.sections section div input:valid:not(:placeholder-shown) {
+  color: #479dde;
+  border-color: #479dde;
+}
+body form div.sections section div input:-webkit-autofill,
+body form div.sections section div input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
 body form div.sections section div.username label > div {
   background-image: url(img/username.png);
 }
@@ -74,6 +119,15 @@ body form div.sections section div.passwords label > div {
 }
 body form div.sections section div.passwords div {
   flex-grow: 1;
+}
+body form div.sections section div.other-data input::-moz-placeholder {
+  color: black;
+}
+body form div.sections section div.other-data input:-ms-input-placeholder {
+  color: black;
+}
+body form div.sections section div.other-data input::placeholder {
+  color: black;
 }
 body form div.sections section.personal-details div {
   gap: 1rem;
